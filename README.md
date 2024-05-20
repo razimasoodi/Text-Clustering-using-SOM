@@ -35,5 +35,5 @@ b) On-center, off-surround approach
 1. Using all documents, build an SOM with 33 neurons.
 2. Depict the SOM-hits plot.
 3. Compute the Euclidean distance of all documents to their winner neurons and sum up the distances.
-4. Repeat steps 1-3 for 44 and 55 topologies.
+4. Repeat steps 1-3 for 4*4 and 5*5 topologies.
 
