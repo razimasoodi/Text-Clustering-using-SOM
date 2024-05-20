@@ -11,15 +11,15 @@ Phase 1: Document Preprocessing
 By means of VSM, each document 𝑑𝑖 can be represented by an 𝑛-dimensional feature vector 𝒗𝑖=<𝑣𝑖1,…,𝑣𝑖𝑛>, where 𝑣𝑖𝑗 is a representation of term 𝑡𝑗 in document 𝑑𝑖 and 𝑛 is the number of distinct terms in the document collection 𝐷.
 An approach for computing 𝑣𝑖𝑗 is the Term Frequency - Inverse Document Frequency (TF-IDF) weighting scheme. This method computes 𝑣𝑖𝑗 for term 𝑡𝑗 in document 𝑑𝑖 as:
 
-𝑣𝑖𝑗=log(1+𝑡𝑓𝑖𝑗)×log(𝑁𝑑𝑓𝑗)
+𝑣𝑖𝑗=log(1+𝑡𝑓𝑖𝑗)×log(𝑁/𝑑𝑓𝑗)
 
 where 𝑡𝑓𝑖𝑗 is the frequency of term 𝑡𝑗 in document 𝑑𝑖, and 𝑑𝑓𝑗 is the number of documents in 𝐷 containing term 𝑡𝑗.
 Read ‘bbc-text.csv’ file and for each document:
 
 1. Remove all non-letter characters from the documents.
-3. Extract all words of the document and remove the short words (length ≤ 2).
-4. Remove all stop words (e.g., ‘a’, ‘and’, ‘what’, …), given in file ‘stopwords.txt’.
-5. Compute the feature vector for each document, using TF-IDF weighting scheme.
+2. Extract all words of the document and remove the short words (length ≤ 2).
+3. Remove all stop words (e.g., ‘a’, ‘and’, ‘what’, …), given in file ‘stopwords.txt’.
+4. Compute the feature vector for each document, using TF-IDF weighting scheme.
 
    
 Phase 2: SOM Clustering
@@ -28,7 +28,7 @@ a) Winner-takes-all approach
 
 1. Using all documents, build an SOM with one neuron for each class.
 2. Depict the SOM-hits plot.
-3. Compute and report the confusion matrix.
+3. Compute the confusion matrix.
    
 b) On-center, off-surround approach
 
@@ -36,4 +36,4 @@ b) On-center, off-surround approach
 2. Depict the SOM-hits plot.
 3. Compute the Euclidean distance of all documents to their winner neurons and sum up the distances.
 4. Repeat steps 1-3 for 44 and 55 topologies.
-5. Report and discuss the overall distances of three topologies.
+
