@@ -1,5 +1,5 @@
 # Text-Clustering-using-SOM
-you have to train and test an SOM network to do cluster analysis of a news collection, from the BBC news website corresponding to stories in five topical areas from 2004-2005. This dataset is a collection of 2225 news document, categorized into 5 classes of ‘business’, ‘entertainment’, ‘politics’, ‘sport’, and ‘tech’.
+You have to train and test an SOM network to do cluster analysis of a news collection, from the BBC news website corresponding to stories in five topical areas from 2004-2005. This dataset is a collection of 2225 news document, categorized into 5 classes of ‘business’, ‘entertainment’, ‘politics’, ‘sport’, and ‘tech’.
 
 Text Clustering using SOM
 
